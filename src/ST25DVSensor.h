@@ -70,7 +70,10 @@ class ST25DV {
     void ST25DV_SelectI2cSpeed(uint8_t i2cspeedchoice);
 
     TwoWire *_pwire;
-
+ 
+    NFCTAG_DrvTypeDef *Driver = &St25Dv_i2c_Drv;
+    NFCTAG_ExtDrvTypeDef *ExtDriver = &St25Dv_i2c_ExtDrv;
+ 
   private:
     uint8_t _gpo;
     uint8_t _lpd;
