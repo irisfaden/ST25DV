@@ -76,17 +76,17 @@ extern "C" {
 typedef enum {
   NDEF_WIFI_ENCRYPTION_NONE = 0x0000, /**< WPS No Encryption (set to 0 for Android native support / should be 1) */
   NDEF_WIFI_ENCRYPTION_WEP  = 0x0002, /**< WPS Encryption based on WEP  */
-  NDEF_WIFI_ENCRYPTION_TKIP = 0x0003, /**< WPS Encryption based on TKIP  */
-  NDEF_WIFI_ENCRYPTION_AES  = 0x0004 /**< WPS Encryption based on AES  */
+  NDEF_WIFI_ENCRYPTION_TKIP = 0x0004, /**< WPS Encryption based on TKIP  */
+  NDEF_WIFI_ENCRYPTION_AES  = 0x0008 /**< WPS Encryption based on AES  */
 } Ndef_Wifi_Encryption_t;
 
 typedef enum {
-  NDEF_WIFI_AUTHENTICATION_NONE     = 0x0000, /**< WPS No Authentication (set to 0 for Android native support / should be 1)  */
-  NDEF_WIFI_AUTHENTICATION_WPAPSK   = 0x0002, /**< WPS Authentication based on WPAPSK  */
-  NDEF_WIFI_AUTHENTICATION_SHARED   = 0x0003, /**< WPS Authentication based on ??  */
-  NDEF_WIFI_AUTHENTICATION_WPA      = 0x0004, /**< WPS Authentication based on WPA  */
-  NDEF_WIFI_AUTHENTICATION_WPA2     = 0x0005, /**< WPS Authentication based on WPA2  */
-  NDEF_WIFI_AUTHENTICATION_WPA2PSK  = 0x0006 /**< WPS Authentication based on WPA2PSK  */
+  NDEF_WIFI_AUTHENTICATION_NONE            = 0x0000, /**< WPS No Authentication (set to 0 for Android native support / should be 1)  */
+  NDEF_WIFI_AUTHENTICATION_WPAPSK          = 0x0002, /**< WPS Authentication based on WPAPSK  */
+  NDEF_WIFI_AUTHENTICATION_SHARED          = 0x0003, /**< WPS Authentication based on ??  */
+  NDEF_WIFI_AUTHENTICATION_WPA2_ENTRPRSE   = 0x0010, /**< WPS Authentication based on WPA2  */
+  NDEF_WIFI_AUTHENTICATION_WPA2_PERSONAL   = 0x0020, /**< WPS Authentication based on WPA2  */
+  NDEF_WIFI_AUTHENTICATION_WPA2PSK         = 0x0006 /**< WPS Authentication based on WPA2PSK  */
 } Ndef_Wifi_Authentication_t;
 
 /**
